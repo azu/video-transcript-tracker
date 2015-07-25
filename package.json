@@ -1,0 +1,40 @@
+{
+  "name": "video-transcript-tracker",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azu/video-transcript-tracker.git"
+  },
+  "author": "azu",
+  "email": "azuciao@gmail.com",
+  "homepage": "https://github.com/azu/video-transcript-tracker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/azu/video-transcript-tracker/issues"
+  },
+  "version": "1.0.0",
+  "description": "To handle \"cueChange\" of <track> element.",
+  "main": "lib/video-transcript-tracker.js",
+  "files": [
+    "lib"
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "babel src --out-dir lib --source-maps --loose es6.classesm",
+    "watch": "babel src --out-dir lib --watch --source-maps --loose es6.classes",
+    "example": "(cd example && npm install && npm run example)"
+  },
+  "keywords": [
+    "video",
+    "track",
+    "transcript"
+  ],
+  "devDependencies": {
+    "babel": "^5.8.5",
+    "babelify": "^6.1.3",
+    "browser-run": "^1.0.1",
+    "browserify": "^11.0.0",
+    "tape": "^4.0.1"
+  }
+}

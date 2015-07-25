@@ -1,0 +1,20 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "example",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify -d example.js -o build.js",
+    "example": "node run-test.js"
+  },
+  "author": "azu",
+  "license": "MIT",
+  "dependencies": {
+    "array.from": "^0.2.0",
+    "video-transcript-tracker": "file:.."
+  },
+  "devDependencies": {
+    "browser-runner": "^2.0.0",
+    "browserify": "^11.0.0"
+  }
+}
