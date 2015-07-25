@@ -27,6 +27,7 @@ Observe the change of `<track>` element.
 var VideoTranscriptTracker = require("video-transcript-tracker");
 var video = document.getElementById("video");
 var tracker = new VideoTranscriptTracker(video);
+// in playing video, show next transcript, then call `onChange` handler.
 tracker.onChange(function (text, track) {
     console.log(text);
 });
