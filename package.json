@@ -21,7 +21,7 @@
     "test": "test"
   },
   "scripts": {
-    "build": "babel src --out-dir lib --source-maps --loose es6.classesm",
+    "build": "babel src --out-dir lib --source-maps --loose es6.classes",
     "watch": "babel src --out-dir lib --watch --source-maps --loose es6.classes",
     "example": "(cd example && npm install && npm run example)"
   },
@@ -31,10 +31,6 @@
     "transcript"
   ],
   "devDependencies": {
-    "babel": "^5.8.5",
-    "babelify": "^6.1.3",
-    "browser-run": "^1.0.1",
-    "browserify": "^11.0.0",
-    "tape": "^4.0.1"
+    "babel": "^5.8.5"
   }
 }
