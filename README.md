@@ -1,18 +1,42 @@
 # video-transcript-tracker
 
-- [ ] Write a project description
+Observe the change of `<track>` element.
 
 ## Installation
 
-- [ ] Describe the installation process
+    npm install video-transcript-tracker
+
+## Dependency
+
+- Array.form
+- [ ] remove this dependency. WelCome to Pull Request!
 
 ## Usage
 
-- [ ] Write usage instructions
+```html
+<video id="video" width="400" src="./Google_Developer_Stories.webm" autoplay controls>
+    <track label="English subtitles" kind="subtitles" srclang="en" src="./video-subtitles-en.vtt" default>
+    Your browser does not support the video tag
+</video>
+<div id="main"></div>
+<script src="node_modules/array.from/array-from.js"></script>
+<script src="build.js"></script>
+```
 
+```js
+var VideoTranscriptTracker = require("video-transcript-tracker");
+var video = document.getElementById("video");
+var tracker = new VideoTranscriptTracker(video);
+tracker.onChange(function (text, track) {
+    console.log(text);
+});
+tracker.start();
+```
 ## Tests
 
-- [ ] Write How to Tests
+Run example 
+
+    npm run example
 
 ## Contributing
 
