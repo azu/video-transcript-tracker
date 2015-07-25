@@ -11,7 +11,7 @@ runner.runBrowser(path.join(__dirname, "index.html"), function (driver) {
         return htmlClassAttr.then(function (className) {
             return className === "test-ok";
         });
-    }, 5000);
+    }, 10000);
 }).catch(function (error) {
     console.error(error, error.stack);
     process.exit(1);

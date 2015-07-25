@@ -4,8 +4,14 @@ var VideoTranscriptTracker = require("video-transcript-tracker");
 var video = document.getElementById("video");
 var tracker = new VideoTranscriptTracker(video);
 // play video, show next transcript, then call `onChange` handler.
+var count = 0;
 tracker.onChange(function (text, track) {
     console.log(text);
-    document.getElementById("main").className = "test-ok";
+    var element = document.getElementById("main");
+    if (count > 2) {
+        element.className = "test-ok";
+    }
+    element.innerHTML = text;
+    count++;
 });
 tracker.start();
